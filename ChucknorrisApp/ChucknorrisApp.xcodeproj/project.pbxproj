@@ -16,6 +16,8 @@
 		AC8E17A62798F4FD00D28D08 /* ChucknorrisAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8E17A52798F4FD00D28D08 /* ChucknorrisAppTests.swift */; };
 		AC8E17B02798F4FD00D28D08 /* ChucknorrisAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8E17AF2798F4FD00D28D08 /* ChucknorrisAppUITests.swift */; };
 		AC8E17B22798F4FD00D28D08 /* ChucknorrisAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8E17B12798F4FD00D28D08 /* ChucknorrisAppUITestsLaunchTests.swift */; };
+		AC8E17C02799A0D700D28D08 /* EnvironmentURLHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8E17BF2799A0D700D28D08 /* EnvironmentURLHandler.swift */; };
+		AC8E17C32799A15E00D28D08 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = AC8E17C22799A15E00D28D08 /* SnapKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,7 @@
 		AC8E17AB2798F4FD00D28D08 /* ChucknorrisAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChucknorrisAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC8E17AF2798F4FD00D28D08 /* ChucknorrisAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChucknorrisAppUITests.swift; sourceTree = "<group>"; };
 		AC8E17B12798F4FD00D28D08 /* ChucknorrisAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChucknorrisAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AC8E17BF2799A0D700D28D08 /* EnvironmentURLHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvironmentURLHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +59,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC8E17C32799A15E00D28D08 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +103,7 @@
 		AC8E178D2798F4FA00D28D08 /* ChucknorrisApp */ = {
 			isa = PBXGroup;
 			children = (
+				AC8E17BE2799A0C600D28D08 /* Environment */,
 				AC8E178E2798F4FA00D28D08 /* AppDelegate.swift */,
 				AC8E17902798F4FA00D28D08 /* SceneDelegate.swift */,
 				AC8E17922798F4FA00D28D08 /* ViewController.swift */,
@@ -127,6 +132,14 @@
 			path = ChucknorrisAppUITests;
 			sourceTree = "<group>";
 		};
+		AC8E17BE2799A0C600D28D08 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				AC8E17BF2799A0D700D28D08 /* EnvironmentURLHandler.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +156,9 @@
 			dependencies = (
 			);
 			name = ChucknorrisApp;
+			packageProductDependencies = (
+				AC8E17C22799A15E00D28D08 /* SnapKit */,
+			);
 			productName = ChucknorrisApp;
 			productReference = AC8E178B2798F4FA00D28D08 /* ChucknorrisApp.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +231,9 @@
 				Base,
 			);
 			mainGroup = AC8E17822798F4FA00D28D08;
+			packageReferences = (
+				AC8E17C12799A15E00D28D08 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = AC8E178C2798F4FA00D28D08 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -261,6 +280,7 @@
 				AC8E17932798F4FA00D28D08 /* ViewController.swift in Sources */,
 				AC8E178F2798F4FA00D28D08 /* AppDelegate.swift in Sources */,
 				AC8E17912798F4FA00D28D08 /* SceneDelegate.swift in Sources */,
+				AC8E17C02799A0D700D28D08 /* EnvironmentURLHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,6 +457,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "https://api.chucknorris.io";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 69845R2YL4;
@@ -465,6 +486,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				BASE_URL = "https://api.chucknorris.io";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 69845R2YL4;
@@ -624,6 +646,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AC8E17C12799A15E00D28D08 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AC8E17C22799A15E00D28D08 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AC8E17C12799A15E00D28D08 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = AC8E17832798F4FA00D28D08 /* Project object */;
 }
