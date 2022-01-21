@@ -20,7 +20,7 @@ final class AppCoordinator {
     
     // MARK: - Internal Function
     func start() -> UINavigationController {
-        let viewController: UIViewController = UIViewController()
+        let viewController: HomeViewController = HomeViewController()
         self.navigationController.setViewControllers([viewController], animated: true)
         return self.navigationController
     }

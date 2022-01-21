@@ -1,5 +1,5 @@
 //
-//  JokesTableViewCell.swift
+//  JokesCollectionViewCell.swift
 //  ChucknorrisApp
 //
 //  Created by Juan David Lopera Lopez on 20/01/22.
@@ -9,7 +9,7 @@ import DesignSystem
 import Foundation
 import UIKit
 
-final class JokesTableViewCell: UITableViewCell {
+final class JokesCollectionViewCell: UICollectionViewCell {
     
     // MARK: - Private UI Properties
     private let iconImage: UIImageView = {
@@ -19,22 +19,31 @@ final class JokesTableViewCell: UITableViewCell {
     
     private let categoriesLabel: UILabel = {
         let label: UILabel = UILabel()
-        label.apply(style: .h2Regular(align: .left, color: .body))
+        label.numberOfLines = 0
+        label.apply(style: .h2Medium(align: .left, color: .body))
         return label
     }()
     
     private let descriptionLabel: UILabel = {
         let label: UILabel = UILabel()
+        label.numberOfLines = 0
         label.apply(style: .h2Regular(align: .left, color: .body))
+        label.adjustsFontSizeToFitWidth = true
         return label
+    }()
+    
+    private let dividerView: UIView = {
+        let view: UIView = UIView()
+        view.apply(background: .divider)
+        return view
     }()
     
     // MARK: - Static Properties
     static let cellIdentifier: String = "JokeCell"
     
     // MARK: - Internal Init
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         setup()
     }
     
@@ -45,16 +54,16 @@ final class JokesTableViewCell: UITableViewCell {
 }
 
 // MARK: - ViewCode
-extension JokesTableViewCell: ViewConfigurationProtocol {
+extension JokesCollectionViewCell: ViewConfigurationProtocol {
     func setupViewHierarchy() {
-        [iconImage, categoriesLabel, descriptionLabel].forEach { view in
+        [iconImage, categoriesLabel, descriptionLabel, dividerView].forEach { view in
             contentView.addSubview(view)
         }
     }
     
     func setupConstraints() {
         iconImage.snp.makeConstraints { make in
-            make.top.equalTo(contentView.snp.top).offset(30.0)
+            make.top.equalTo(contentView.snp.top).offset(10.0)
             make.leading.equalTo(contentView.snp.leading).offset(20.0)
             make.height.equalTo(50.0)
             make.width.equalTo(50.0)
@@ -73,6 +82,13 @@ extension JokesTableViewCell: ViewConfigurationProtocol {
             make.trailing.equalTo(contentView.snp.trailing).offset(-20.0)
             make.bottom.equalTo(contentView.snp.bottom).offset(-10.0)
         }
+        
+        dividerView.snp.makeConstraints { make in
+            make.leading.equalTo(contentView.snp.leading).offset(30.0)
+            make.trailing.equalTo(contentView.snp.trailing).offset(-30.0)
+            make.bottom.equalTo(contentView.snp.bottom).offset(-5.0)
+            make.height.equalTo(1.5)
+        }
     }
     
     func configureViews() {
@@ -81,9 +97,9 @@ extension JokesTableViewCell: ViewConfigurationProtocol {
 }
 
 // MARK: - Internal Function
-extension JokesTableViewCell {
+extension JokesCollectionViewCell {
     func set(viewModel: HomeViewModel) {
-        iconImage.image = viewModel.icon
+        iconImage.load(url: viewModel.icon)
         categoriesLabel.text = viewModel.categories
         descriptionLabel.text = viewModel.descriptionForRow
     }

@@ -33,9 +33,9 @@
 		AC8E17FA2799B46000D28D08 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8E17F92799B46000D28D08 /* HomeViewController.swift */; };
 		AC8E17FD2799B51400D28D08 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8E17FC2799B51400D28D08 /* HomeViewModel.swift */; };
 		AC8E17FF2799B58E00D28D08 /* HomeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8E17FE2799B58E00D28D08 /* HomeAPI.swift */; };
-		AC8E18012799B66400D28D08 /* JokesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8E18002799B66400D28D08 /* JokesTableViewCell.swift */; };
-		AC8E18042799EBFD00D28D08 /* DatasourceInformationTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8E18032799EBFD00D28D08 /* DatasourceInformationTable.swift */; };
-		AC8E18062799EC1500D28D08 /* DelegateInformationTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8E18052799EC1500D28D08 /* DelegateInformationTable.swift */; };
+		AC8E18012799B66400D28D08 /* JokesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8E18002799B66400D28D08 /* JokesCollectionViewCell.swift */; };
+		AC8E18042799EBFD00D28D08 /* DatasourceInformationCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8E18032799EBFD00D28D08 /* DatasourceInformationCollection.swift */; };
+		AC8E18062799EC1500D28D08 /* DelegateInformationCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8E18052799EC1500D28D08 /* DelegateInformationCollection.swift */; };
 		ACF5D9D02799F926003D5A1D /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5D9CF2799F926003D5A1D /* AppCoordinator.swift */; };
 		ACF5D9D9279A2C97003D5A1D /* APIManager.h in Headers */ = {isa = PBXBuildFile; fileRef = ACF5D9D8279A2C97003D5A1D /* APIManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ACF5D9DC279A2C97003D5A1D /* APIManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF5D9D6279A2C97003D5A1D /* APIManager.framework */; };
@@ -44,6 +44,12 @@
 		ACF5D9E5279A2CB7003D5A1D /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5D9E4279A2CB7003D5A1D /* HttpMethod.swift */; };
 		ACF5D9E7279A2CC3003D5A1D /* HttpHeaders.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5D9E6279A2CC3003D5A1D /* HttpHeaders.swift */; };
 		ACF5D9E9279A2CD3003D5A1D /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5D9E8279A2CD3003D5A1D /* HttpError.swift */; };
+		ACF5D9EC279A2F2C003D5A1D /* Jokes.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5D9EB279A2F2C003D5A1D /* Jokes.swift */; };
+		ACF5D9EE279A2F42003D5A1D /* JokesResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5D9ED279A2F42003D5A1D /* JokesResult.swift */; };
+		ACF5D9F1279A3D50003D5A1D /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5D9F0279A3D50003D5A1D /* UIImageExtension.swift */; };
+		ACF5D9F6279A3F8F003D5A1D /* LoaderBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5D9F5279A3F8F003D5A1D /* LoaderBaseView.swift */; };
+		ACF5D9F9279A418B003D5A1D /* HomeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5D9F8279A418B003D5A1D /* HomeText.swift */; };
+		ACF5D9FB279A4197003D5A1D /* AppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5D9FA279A4197003D5A1D /* AppText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,9 +127,9 @@
 		AC8E17F92799B46000D28D08 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		AC8E17FC2799B51400D28D08 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		AC8E17FE2799B58E00D28D08 /* HomeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeAPI.swift; sourceTree = "<group>"; };
-		AC8E18002799B66400D28D08 /* JokesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesTableViewCell.swift; sourceTree = "<group>"; };
-		AC8E18032799EBFD00D28D08 /* DatasourceInformationTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatasourceInformationTable.swift; sourceTree = "<group>"; };
-		AC8E18052799EC1500D28D08 /* DelegateInformationTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateInformationTable.swift; sourceTree = "<group>"; };
+		AC8E18002799B66400D28D08 /* JokesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesCollectionViewCell.swift; sourceTree = "<group>"; };
+		AC8E18032799EBFD00D28D08 /* DatasourceInformationCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatasourceInformationCollection.swift; sourceTree = "<group>"; };
+		AC8E18052799EC1500D28D08 /* DelegateInformationCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateInformationCollection.swift; sourceTree = "<group>"; };
 		ACF5D9CF2799F926003D5A1D /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		ACF5D9D6279A2C97003D5A1D /* APIManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = APIManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF5D9D8279A2C97003D5A1D /* APIManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = APIManager.h; sourceTree = "<group>"; };
@@ -131,6 +137,12 @@
 		ACF5D9E4279A2CB7003D5A1D /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
 		ACF5D9E6279A2CC3003D5A1D /* HttpHeaders.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpHeaders.swift; sourceTree = "<group>"; };
 		ACF5D9E8279A2CD3003D5A1D /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
+		ACF5D9EB279A2F2C003D5A1D /* Jokes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Jokes.swift; sourceTree = "<group>"; };
+		ACF5D9ED279A2F42003D5A1D /* JokesResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesResult.swift; sourceTree = "<group>"; };
+		ACF5D9F0279A3D50003D5A1D /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
+		ACF5D9F5279A3F8F003D5A1D /* LoaderBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderBaseView.swift; sourceTree = "<group>"; };
+		ACF5D9F8279A418B003D5A1D /* HomeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeText.swift; sourceTree = "<group>"; };
+		ACF5D9FA279A4197003D5A1D /* AppText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +214,7 @@
 		AC8E178D2798F4FA00D28D08 /* ChucknorrisApp */ = {
 			isa = PBXGroup;
 			children = (
+				ACF5D9EF279A3D41003D5A1D /* Extension */,
 				ACF5D9CE2799F91B003D5A1D /* Coordinator */,
 				AC8E17C42799A27100D28D08 /* Home */,
 				AC8E17BE2799A0C600D28D08 /* Environment */,
@@ -212,6 +225,7 @@
 				AC8E17972798F4FD00D28D08 /* Assets.xcassets */,
 				AC8E17992798F4FD00D28D08 /* LaunchScreen.storyboard */,
 				AC8E179C2798F4FD00D28D08 /* Info.plist */,
+				ACF5D9FA279A4197003D5A1D /* AppText.swift */,
 			);
 			path = ChucknorrisApp;
 			sourceTree = "<group>";
@@ -244,6 +258,8 @@
 		AC8E17C42799A27100D28D08 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				ACF5D9F7279A417F003D5A1D /* Resources */,
+				ACF5D9EA279A2F1A003D5A1D /* Model */,
 				AC8E17FB2799B50500D28D08 /* API */,
 				AC8E17C72799A28400D28D08 /* ViewController */,
 				AC8E17C62799A28000D28D08 /* View */,
@@ -263,7 +279,7 @@
 		AC8E17C62799A28000D28D08 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				AC8E17F82799B44A00D28D08 /* TableViewCell */,
+				AC8E17F82799B44A00D28D08 /* CollectionViewCell */,
 				AC8E17C82799A2C300D28D08 /* HomeBaseView.swift */,
 			);
 			path = View;
@@ -272,7 +288,7 @@
 		AC8E17C72799A28400D28D08 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				AC8E18022799EBE300D28D08 /* DatasourceDelegateTableView */,
+				AC8E18022799EBE300D28D08 /* DatasourceDelegateCollectionView */,
 				AC8E17F92799B46000D28D08 /* HomeViewController.swift */,
 			);
 			path = ViewController;
@@ -281,6 +297,7 @@
 		AC8E17D02799A3DA00D28D08 /* DesignSystem */ = {
 			isa = PBXGroup;
 			children = (
+				ACF5D9F2279A3F6C003D5A1D /* Component */,
 				AC8E17ED2799A54200D28D08 /* HelperBundle */,
 				AC8E17EC2799A4C800D28D08 /* Resources */,
 				AC8E17E82799A48800D28D08 /* Colors */,
@@ -382,12 +399,12 @@
 			path = Background;
 			sourceTree = "<group>";
 		};
-		AC8E17F82799B44A00D28D08 /* TableViewCell */ = {
+		AC8E17F82799B44A00D28D08 /* CollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				AC8E18002799B66400D28D08 /* JokesTableViewCell.swift */,
+				AC8E18002799B66400D28D08 /* JokesCollectionViewCell.swift */,
 			);
-			path = TableViewCell;
+			path = CollectionViewCell;
 			sourceTree = "<group>";
 		};
 		AC8E17FB2799B50500D28D08 /* API */ = {
@@ -398,13 +415,13 @@
 			path = API;
 			sourceTree = "<group>";
 		};
-		AC8E18022799EBE300D28D08 /* DatasourceDelegateTableView */ = {
+		AC8E18022799EBE300D28D08 /* DatasourceDelegateCollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				AC8E18032799EBFD00D28D08 /* DatasourceInformationTable.swift */,
-				AC8E18052799EC1500D28D08 /* DelegateInformationTable.swift */,
+				AC8E18032799EBFD00D28D08 /* DatasourceInformationCollection.swift */,
+				AC8E18052799EC1500D28D08 /* DelegateInformationCollection.swift */,
 			);
-			path = DatasourceDelegateTableView;
+			path = DatasourceDelegateCollectionView;
 			sourceTree = "<group>";
 		};
 		ACF5D9CE2799F91B003D5A1D /* Coordinator */ = {
@@ -433,6 +450,55 @@
 				ACF5D9E8279A2CD3003D5A1D /* HttpError.swift */,
 			);
 			path = Http;
+			sourceTree = "<group>";
+		};
+		ACF5D9EA279A2F1A003D5A1D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ACF5D9EB279A2F2C003D5A1D /* Jokes.swift */,
+				ACF5D9ED279A2F42003D5A1D /* JokesResult.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		ACF5D9EF279A3D41003D5A1D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				ACF5D9F0279A3D50003D5A1D /* UIImageExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		ACF5D9F2279A3F6C003D5A1D /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				ACF5D9F3279A3F7A003D5A1D /* Loader */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		ACF5D9F3279A3F7A003D5A1D /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				ACF5D9F4279A3F83003D5A1D /* View */,
+			);
+			path = Loader;
+			sourceTree = "<group>";
+		};
+		ACF5D9F4279A3F83003D5A1D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ACF5D9F5279A3F8F003D5A1D /* LoaderBaseView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ACF5D9F7279A417F003D5A1D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ACF5D9F8279A418B003D5A1D /* HomeText.swift */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -656,14 +722,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACF5D9D02799F926003D5A1D /* AppCoordinator.swift in Sources */,
+				ACF5D9FB279A4197003D5A1D /* AppText.swift in Sources */,
 				AC8E17932798F4FA00D28D08 /* ViewController.swift in Sources */,
 				AC8E17FA2799B46000D28D08 /* HomeViewController.swift in Sources */,
-				AC8E18062799EC1500D28D08 /* DelegateInformationTable.swift in Sources */,
+				AC8E18062799EC1500D28D08 /* DelegateInformationCollection.swift in Sources */,
 				AC8E17FD2799B51400D28D08 /* HomeViewModel.swift in Sources */,
 				AC8E17FF2799B58E00D28D08 /* HomeAPI.swift in Sources */,
-				AC8E18042799EBFD00D28D08 /* DatasourceInformationTable.swift in Sources */,
+				ACF5D9EC279A2F2C003D5A1D /* Jokes.swift in Sources */,
+				ACF5D9F9279A418B003D5A1D /* HomeText.swift in Sources */,
+				AC8E18042799EBFD00D28D08 /* DatasourceInformationCollection.swift in Sources */,
+				ACF5D9F1279A3D50003D5A1D /* UIImageExtension.swift in Sources */,
 				AC8E178F2798F4FA00D28D08 /* AppDelegate.swift in Sources */,
-				AC8E18012799B66400D28D08 /* JokesTableViewCell.swift in Sources */,
+				ACF5D9EE279A2F42003D5A1D /* JokesResult.swift in Sources */,
+				AC8E18012799B66400D28D08 /* JokesCollectionViewCell.swift in Sources */,
 				AC8E17C92799A2C300D28D08 /* HomeBaseView.swift in Sources */,
 				AC8E17912798F4FA00D28D08 /* SceneDelegate.swift in Sources */,
 				AC8E17C02799A0D700D28D08 /* EnvironmentURLHandler.swift in Sources */,
@@ -695,6 +766,7 @@
 				AC8E17F22799A57400D28D08 /* UIViewExtension.swift in Sources */,
 				AC8E17E12799A44200D28D08 /* LabelStyle.swift in Sources */,
 				AC8E17E72799A47A00D28D08 /* UILabelExtension.swift in Sources */,
+				ACF5D9F6279A3F8F003D5A1D /* LoaderBaseView.swift in Sources */,
 				AC8E17DD2799A40400D28D08 /* ViewConfigurationProtocol.swift in Sources */,
 				AC8E17EF2799A54D00D28D08 /* HelperBundle.swift in Sources */,
 				AC8E17EB2799A4A400D28D08 /* DSTextColor.swift in Sources */,
@@ -887,6 +959,7 @@
 				INFOPLIST_FILE = ChucknorrisApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -916,6 +989,7 @@
 				INFOPLIST_FILE = ChucknorrisApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1106,7 +1180,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1116,10 +1190,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = JuanCompany.APIManager;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -1139,7 +1214,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1149,9 +1224,10 @@
 				PRODUCT_BUNDLE_IDENTIFIER = JuanCompany.APIManager;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};

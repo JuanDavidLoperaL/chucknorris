@@ -10,6 +10,9 @@ import SnapKit
 import UIKit
 
 final class HomeBaseView: UIView {
+    
+    typealias screenText = AppText.Home
+    
     // MARK: - Private UI Properties
     private let titleLabel: UILabel = {
         let label: UILabel = UILabel()
@@ -17,15 +20,22 @@ final class HomeBaseView: UIView {
         return label
     }()
     
-    private let informationTableView: UITableView = {
-        let tableView: UITableView = UITableView()
-        tableView.tableFooterView = UIView()
-        return tableView
+    private let informationCollectionView: UICollectionView = {
+        let flowLayout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        flowLayout.scrollDirection = .vertical
+        flowLayout.minimumLineSpacing = 0
+        let collectionView: UICollectionView = UICollectionView(frame: .zero, collectionViewLayout: flowLayout)
+        collectionView.register(JokesCollectionViewCell.self, forCellWithReuseIdentifier: JokesCollectionViewCell.cellIdentifier)
+        collectionView.backgroundColor = .clear
+        collectionView.showsHorizontalScrollIndicator = false
+        return collectionView
     }()
     
+    private let loader: LoaderBaseView = LoaderBaseView()
+    
     // MARK: - Private Properties
-    private var datasourceTable: DatasourceInformationTable?
-    private var delegateTable: DelegateInformationTable?
+    private var datasourceCollection: DatasourceInformationCollection?
+    private var delegateCollection: DelegateInformationCollection?
     
     // MARK: - Internal Init
     init() {
@@ -42,7 +52,7 @@ final class HomeBaseView: UIView {
 // MARK: - ViewCode
 extension HomeBaseView: ViewConfigurationProtocol {
     func setupViewHierarchy() {
-        [titleLabel, informationTableView].forEach { view in
+        [titleLabel, informationCollectionView, loader].forEach { view in
             addSubview(view)
         }
     }
@@ -54,16 +64,24 @@ extension HomeBaseView: ViewConfigurationProtocol {
             make.trailing.equalTo(self.snp.trailing).offset(-20.0)
         }
         
-        informationTableView.snp.makeConstraints { make in
+        informationCollectionView.snp.makeConstraints { make in
             make.top.equalTo(titleLabel.snp.bottom).offset(10.0)
             make.leading.equalTo(self.snp.leading)
             make.trailing.equalTo(self.snp.trailing)
             make.bottom.equalTo(self.snp.bottomMargin)
         }
+        
+        loader.snp.makeConstraints { make in
+            make.top.equalTo(self.snp.top)
+            make.leading.equalTo(self.snp.leading)
+            make.trailing.equalTo(self.snp.trailing)
+            make.bottom.equalTo(self.snp.bottom)
+        }
     }
     
     func configureViews() {
         self.apply(background: .mainScreen)
+        loader.setLoader(message: screenText.downloadMessage)
     }
 }
 
@@ -71,14 +89,31 @@ extension HomeBaseView: ViewConfigurationProtocol {
 extension HomeBaseView {
     func set(viewModel: HomeViewModel) {
         titleLabel.text = viewModel.title
-        datasourceTable = DatasourceInformationTable(viewModel: viewModel)
-        delegateTable = DelegateInformationTable(viewModel: viewModel)
-        informationTableView.dataSource = datasourceTable
-        informationTableView.delegate = delegateTable
-        informationTableView.reloadData()
+        datasourceCollection = DatasourceInformationCollection(viewModel: viewModel)
+        delegateCollection = DelegateInformationCollection(viewModel: viewModel)
+        informationCollectionView.dataSource = datasourceCollection
+        informationCollectionView.delegate = delegateCollection
+        informationCollectionView.reloadData()
     }
     
-    func reloadTableView() {
-        informationTableView.reloadData()
+    func reloadCollectionView() {
+        informationCollectionView.reloadData()
+    }
+    
+    func showLoader(with trackValue: CGFloat) {
+        loader.showLoader(with: trackValue)
+    }
+    
+    func hideLoader() {
+        loader.isHidden = true
+        loader.alpha = 0.0
+    }
+    
+    func loaderFinished(withError: Bool) {
+        if withError {
+            loader.finishWithError()
+        } else {
+            loader.finish()
+        }
     }
 }
