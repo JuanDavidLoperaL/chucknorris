@@ -24,9 +24,12 @@ final class HomeViewController: UIViewController {
     
     // MARK: - Private Properties
     private let viewModel: HomeViewModel
+    private let coordinator: AppCoordinator
     
     // MARK: - Internal Init
-    init(viewModel: HomeViewModel = HomeViewModel()) {
+    init(coordinator: AppCoordinator,
+         viewModel: HomeViewModel = HomeViewModel()) {
+        self.coordinator = coordinator
         self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
@@ -65,7 +68,7 @@ extension HomeViewController: HomeViewControllerDelegate {
     }
     
     func selected(joke: JokesResult) {
-        print("selected: \(joke)")
+        coordinator.navigateToDetail(with: joke)
     }
 }
 

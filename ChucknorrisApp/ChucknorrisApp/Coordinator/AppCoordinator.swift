@@ -20,8 +20,14 @@ final class AppCoordinator {
     
     // MARK: - Internal Function
     func start() -> UINavigationController {
-        let viewController: HomeViewController = HomeViewController()
+        let viewController: HomeViewController = HomeViewController(coordinator: self)
         self.navigationController.setViewControllers([viewController], animated: true)
         return self.navigationController
+    }
+    
+    func navigateToDetail(with joke: JokesResult) {
+        let viewModel: DetailViewModel = DetailViewModel(joke: joke)
+        let viewController: DetailViewController = DetailViewController(coordinator: self, viewModel: viewModel)
+        self.navigationController.pushViewController(viewController, animated: true)
     }
 }

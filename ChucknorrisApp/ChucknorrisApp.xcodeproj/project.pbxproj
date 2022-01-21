@@ -50,6 +50,13 @@
 		ACF5D9F6279A3F8F003D5A1D /* LoaderBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5D9F5279A3F8F003D5A1D /* LoaderBaseView.swift */; };
 		ACF5D9F9279A418B003D5A1D /* HomeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5D9F8279A418B003D5A1D /* HomeText.swift */; };
 		ACF5D9FB279A4197003D5A1D /* AppText.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5D9FA279A4197003D5A1D /* AppText.swift */; };
+		ACF5D9FF279A612B003D5A1D /* DetailBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5D9FE279A612B003D5A1D /* DetailBaseView.swift */; };
+		ACF5DA02279A6498003D5A1D /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5DA01279A6498003D5A1D /* DetailViewController.swift */; };
+		ACF5DA05279A66FE003D5A1D /* DetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5DA04279A66FE003D5A1D /* DetailViewModel.swift */; };
+		ACF5DA08279A72C7003D5A1D /* DatasourceJokesCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5DA07279A72C7003D5A1D /* DatasourceJokesCollection.swift */; };
+		ACF5DA0A279A7503003D5A1D /* DelegateJokesCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5DA09279A7503003D5A1D /* DelegateJokesCollection.swift */; };
+		ACF5DA0D279A7553003D5A1D /* JokeImageCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5DA0C279A7553003D5A1D /* JokeImageCollectionCell.swift */; };
+		ACF5DA10279A7797003D5A1D /* DetailText.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5DA0F279A7797003D5A1D /* DetailText.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -143,6 +150,13 @@
 		ACF5D9F5279A3F8F003D5A1D /* LoaderBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderBaseView.swift; sourceTree = "<group>"; };
 		ACF5D9F8279A418B003D5A1D /* HomeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeText.swift; sourceTree = "<group>"; };
 		ACF5D9FA279A4197003D5A1D /* AppText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppText.swift; sourceTree = "<group>"; };
+		ACF5D9FE279A612B003D5A1D /* DetailBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailBaseView.swift; sourceTree = "<group>"; };
+		ACF5DA01279A6498003D5A1D /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		ACF5DA04279A66FE003D5A1D /* DetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewModel.swift; sourceTree = "<group>"; };
+		ACF5DA07279A72C7003D5A1D /* DatasourceJokesCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatasourceJokesCollection.swift; sourceTree = "<group>"; };
+		ACF5DA09279A7503003D5A1D /* DelegateJokesCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DelegateJokesCollection.swift; sourceTree = "<group>"; };
+		ACF5DA0C279A7553003D5A1D /* JokeImageCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeImageCollectionCell.swift; sourceTree = "<group>"; };
+		ACF5DA0F279A7797003D5A1D /* DetailText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailText.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,9 +229,10 @@
 			isa = PBXGroup;
 			children = (
 				ACF5D9EF279A3D41003D5A1D /* Extension */,
+				AC8E17BE2799A0C600D28D08 /* Environment */,
 				ACF5D9CE2799F91B003D5A1D /* Coordinator */,
 				AC8E17C42799A27100D28D08 /* Home */,
-				AC8E17BE2799A0C600D28D08 /* Environment */,
+				ACF5D9FC279A6115003D5A1D /* Detail */,
 				AC8E178E2798F4FA00D28D08 /* AppDelegate.swift */,
 				AC8E17902798F4FA00D28D08 /* SceneDelegate.swift */,
 				AC8E17922798F4FA00D28D08 /* ViewController.swift */,
@@ -501,6 +516,68 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		ACF5D9FC279A6115003D5A1D /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				ACF5DA0E279A778F003D5A1D /* Resource */,
+				ACF5DA03279A66F1003D5A1D /* ViewModel */,
+				ACF5DA00279A648D003D5A1D /* ViewController */,
+				ACF5D9FD279A6121003D5A1D /* View */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		ACF5D9FD279A6121003D5A1D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ACF5DA0B279A7541003D5A1D /* CollectionViewCell */,
+				ACF5D9FE279A612B003D5A1D /* DetailBaseView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		ACF5DA00279A648D003D5A1D /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				ACF5DA06279A72AA003D5A1D /* DatasourceDelegateCollectionView */,
+				ACF5DA01279A6498003D5A1D /* DetailViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		ACF5DA03279A66F1003D5A1D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				ACF5DA04279A66FE003D5A1D /* DetailViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		ACF5DA06279A72AA003D5A1D /* DatasourceDelegateCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				ACF5DA07279A72C7003D5A1D /* DatasourceJokesCollection.swift */,
+				ACF5DA09279A7503003D5A1D /* DelegateJokesCollection.swift */,
+			);
+			path = DatasourceDelegateCollectionView;
+			sourceTree = "<group>";
+		};
+		ACF5DA0B279A7541003D5A1D /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				ACF5DA0C279A7553003D5A1D /* JokeImageCollectionCell.swift */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		ACF5DA0E279A778F003D5A1D /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				ACF5DA0F279A7797003D5A1D /* DetailText.swift */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -724,13 +801,19 @@
 				ACF5D9D02799F926003D5A1D /* AppCoordinator.swift in Sources */,
 				ACF5D9FB279A4197003D5A1D /* AppText.swift in Sources */,
 				AC8E17932798F4FA00D28D08 /* ViewController.swift in Sources */,
+				ACF5DA10279A7797003D5A1D /* DetailText.swift in Sources */,
+				ACF5DA0D279A7553003D5A1D /* JokeImageCollectionCell.swift in Sources */,
+				ACF5DA05279A66FE003D5A1D /* DetailViewModel.swift in Sources */,
 				AC8E17FA2799B46000D28D08 /* HomeViewController.swift in Sources */,
+				ACF5DA02279A6498003D5A1D /* DetailViewController.swift in Sources */,
 				AC8E18062799EC1500D28D08 /* DelegateInformationCollection.swift in Sources */,
 				AC8E17FD2799B51400D28D08 /* HomeViewModel.swift in Sources */,
 				AC8E17FF2799B58E00D28D08 /* HomeAPI.swift in Sources */,
 				ACF5D9EC279A2F2C003D5A1D /* Jokes.swift in Sources */,
+				ACF5D9FF279A612B003D5A1D /* DetailBaseView.swift in Sources */,
 				ACF5D9F9279A418B003D5A1D /* HomeText.swift in Sources */,
 				AC8E18042799EBFD00D28D08 /* DatasourceInformationCollection.swift in Sources */,
+				ACF5DA08279A72C7003D5A1D /* DatasourceJokesCollection.swift in Sources */,
 				ACF5D9F1279A3D50003D5A1D /* UIImageExtension.swift in Sources */,
 				AC8E178F2798F4FA00D28D08 /* AppDelegate.swift in Sources */,
 				ACF5D9EE279A2F42003D5A1D /* JokesResult.swift in Sources */,
@@ -738,6 +821,7 @@
 				AC8E17C92799A2C300D28D08 /* HomeBaseView.swift in Sources */,
 				AC8E17912798F4FA00D28D08 /* SceneDelegate.swift in Sources */,
 				AC8E17C02799A0D700D28D08 /* EnvironmentURLHandler.swift in Sources */,
+				ACF5DA0A279A7503003D5A1D /* DelegateJokesCollection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
