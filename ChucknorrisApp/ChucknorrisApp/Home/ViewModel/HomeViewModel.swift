@@ -92,11 +92,13 @@ extension HomeViewModel {
                 self?.timer?.invalidate()
                 switch result {
                 case .success(let jokesResponse):
+                    self?.httpError = nil
                     self?.jokes = jokesResponse
                     self?.delegate?.informationLoadedWithSucess()
                     callback(true)
                 case .failure(let error):
                     self?.jokes = nil
+                    self?.httpError = error
                     self?.delegate?.errorLoadingInformation()
                     callback(false)
                 }
